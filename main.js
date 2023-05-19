@@ -95,3 +95,4 @@ while (continuar){
    continuar = confirm("Quiere actualizar alguna otra clienta")
 }
 console.log(clientas)
+

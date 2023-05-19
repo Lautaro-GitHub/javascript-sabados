@@ -39,7 +39,7 @@ const datoActualizar = (propiedad,index) => {
    let modificar = confirm(`quiere cambiar el ${propiedad} de la clienta`)
    if(modificar){
       const valorPropiedad = prompt(`ingrese ${propiedad}`).toUpperCase()
-      clientas.[index][propiedad] = valorPropiedad
+      clientas[index][propiedad] = valorPropiedad
    }
 }
 

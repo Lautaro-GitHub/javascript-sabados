@@ -48,3 +48,6 @@
     display: flex;
     justify-content: end;
 }
+.contenido h3{
+   margin: 10px;
+}

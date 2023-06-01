@@ -109,7 +109,7 @@ const servicios = [
    {
       id: 2,
       nombre: "Esmaltado semipermanente",
-      descripcion: "es un sistema de duración corta, entorno 2-3 semanas, sin hacer extensión de la uña, es decir, no se puede alargar la uña con este tipo de esmalte. Para eliminarlo, basta con un removedor. Además, lo puedes encontrar en diferentes colores, ya que es un híbrido de esmalte y ge",
+      descripcion: "es un sistema de duración corta, entorno 2-3 semanas, sin hacer extensión de la uña, es decir, no se puede alargar la uña con este tipo de esmalte. Para eliminarlo, basta con un removedor. Además, lo puedes encontrar en diferentes colores, ya que es un híbrido de esmalte y gel",
       urlImg: "https://i.ibb.co/vwLPmKY/Esmaltado-semi-1.jpg",
       precio: 2500
    },
@@ -128,12 +128,12 @@ const verServicio = ({ id, nombre, descripcion, urlImg, precio }) => {
    const tarjeta = document.createElement("div")
    tarjeta.className = "tarjeta"
    tarjeta.innerHTML = ` 
-                       <img src="${urlImg}" alt="">
-                       <div class="contenido">
-                            <h3>${nombre}<h/3>
+                        <img src="${urlImg}" alt="">
+                        <div class="contenido">
+                            <h3>${nombre}</h3>
                             <p>${descripcion}</p>
-                            <span>Precio: ${precio}$</span>
-                        </div> 
+                            <span><b>Precio:</b> ${precio}$</span>
+                        </div>
                         <form id="formCarrito${id}">
                         <input name="id" type="hidden" value="${id}">
                         <input name="cantidad" type="number" value="1" min="1" max="5">

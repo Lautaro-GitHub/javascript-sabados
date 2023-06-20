@@ -123,6 +123,7 @@ const verServicio = ({ id, nombre, descripcion, urlImg, precio }) => {
 
 const carrito = JSON.parse(localStorage.getItem("carrito")) ?? []
 
+
 //FUNCION CARRITO
 const agregarCarrito = (id) => {
    const formCarrito = document.querySelector("#formCarrito" + id)
@@ -133,7 +134,7 @@ const agregarCarrito = (id) => {
          id,
          cantidad
       })
-  
+      
       localStorage.setItem("carrito",JSON.stringify(carrito))
       Toastify({
          text:"Producto agregado al carrito",

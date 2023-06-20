@@ -24,7 +24,7 @@
    "nombre": "PEDICURE BASIC",
    "descripcion": "Pedicure BASIC incluye: limado, cutícula, esmaltado e hidratación con crema de almendras.",
    "urlImg": "https://i.ibb.co/vZ42CHc/proyecto-moi.jpg",
-   "precio": 3500
+   "precio": 2500
 },
 {
    "id": 5,
@@ -38,20 +38,20 @@
    "nombre": "PODOESTÉTICA",
    "descripcion": "Limado, cutícula y esmaltado. Utilización del bisturí para eliminar durezas y terminaciones con torno para darle una forma delicada y perfecta.",
    "urlImg": "https://i.ibb.co/1JYftmn/proyecto-moi3.jpg",
-   "precio": 3500
+   "precio": 3000
 },
 {
    "id": 7,
    "nombre": "SERVICIO BEAUTY",
    "descripcion": "Perfilado de cejas, Tinte y permanente de pestañas, higiene facial, masajes, depilación y mucho más.",
    "urlImg": "https://i.ibb.co/8x6HmHs/perfilado-2.jpg",
-   "precio": 3500
+   "precio": 3300
 },
 {
    "id": 8,
    "nombre": "ESMALTADO SHINE",
    "descripcion": "El sistema profesional de esmalte de larga duración OPI Infinite Shine de 3 pasos proporciona un color intenso y duradero que no requiere luz para su curado.",
    "urlImg": "https://i.ibb.co/MMwb8z9/shine.jpg",
-   "precio": 3500
+   "precio": 2700
 }
 ]

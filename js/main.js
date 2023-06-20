@@ -97,38 +97,15 @@ while (continuar){
 console.log(clientas)
 */
 
-//3RA ENTREGA
-const servicios = [
-   {
-      id: 1,
-      nombre: "Kapping",
-      descripcion: "Técnica que fortalece superficialmente la uña, haciéndola más gruesa y resistente, consiste en aplicar una fina capa de acrílico o gel fortificador que actuará como una barrera protectora. Este proceso es superficial y con una finalidad estética.",
-      urlImg: "https://i.ibb.co/g3nb0Sv/clientas-kapping-1.jpg",
-      precio: 1800
-   },
-   {
-      id: 2,
-      nombre: "Esmaltado semipermanente",
-      descripcion: "es un sistema de duración corta, entorno 2-3 semanas, sin hacer extensión de la uña, es decir, no se puede alargar la uña con este tipo de esmalte. Para eliminarlo, basta con un removedor. Además, lo puedes encontrar en diferentes colores, ya que es un híbrido de esmalte y gel",
-      urlImg: "https://i.ibb.co/vwLPmKY/Esmaltado-semi-1.jpg",
-      precio: 2500
-   },
-   {
-      id: 3,
-      nombre: "Esculpidas",
-      descripcion: "Extensiones que se construyen a partir de la uña natural con material acrílico o gel. Estas permiten restaurar y reconstruir uñas mordidas o simplemente, lucir uñas más largas. Algo que las hace sumamente atractivas, ya que se puede moldear la forma y longitud para obtener varios estilos.",
-      urlImg: "https://i.ibb.co/L0RCpc7/esculpidas-clientas2.jpg",
-      precio: 3500
-   }
-]
+//ENTREGA FINAL
 
-//array con funcion
+//FUNCION VER SERVICIO
 const verServicio = ({ id, nombre, descripcion, urlImg, precio }) => {
    const contenedorTarjetas = document.querySelector("#contenedorTarjetas")
    const tarjeta = document.createElement("div")
    tarjeta.className = "tarjeta"
    tarjeta.innerHTML = ` 
-                        <img src="${urlImg}" alt="">
+                        <img src="${urlImg}"  alt="">
                         <div class="contenido">
                             <h3>${nombre}</h3>
                             <p>${descripcion}</p>
@@ -146,6 +123,7 @@ const verServicio = ({ id, nombre, descripcion, urlImg, precio }) => {
 
 const carrito = JSON.parse(localStorage.getItem("carrito")) ?? []
 
+//FUNCION CARRITO
 const agregarCarrito = (id) => {
    const formCarrito = document.querySelector("#formCarrito" + id)
    formCarrito.addEventListener("submit",(e)=>{
@@ -155,11 +133,27 @@ const agregarCarrito = (id) => {
          id,
          cantidad
       })
-        
+  
       localStorage.setItem("carrito",JSON.stringify(carrito))
+      Toastify({
+         text:"Producto agregado al carrito",
+         duration: 2000,
+         gravity: "bottom",
+         position: "lefth",
+         style: {
+            background: "coral",
+            widht: "300px",
+            textAlign:"center"
+         },
+      }).showToast();
    })
 }
-const verServicios = () => {
+
+//FUNCION VER SERVICIOS MAS FETCH
+const verServicios = async () => {
+   const res = await fetch("./servicios.json")
+   const servicios = await res.json()
+   console.log(servicios)
    servicios.forEach(servicios => {
       verServicio(servicios)
       agregarCarrito (servicios.id)
